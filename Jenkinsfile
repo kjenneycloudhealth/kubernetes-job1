@@ -9,7 +9,6 @@ pipeline {
   }
   stages {
     stage('Run a bash script') {
-      git 'https://github.com/kjenneycloudhealth/kubernetes-job1.git'
       steps {
         container('bash') {
           sh './test.sh'
