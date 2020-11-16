@@ -4,17 +4,15 @@ pipeline {
       label 'promo-app'
       idleMinutes 5
       yamlFile 'build-pod.yaml'
-      defaultContainer 'maven'
+      defaultContainer 'bash'
     }
   }
   stages {
-    stage('Run maven') {
+    stage('Run a bash script') {
+      git 'https://github.com/kjenneycloudhealth/kubernetes-job1.git'
       steps {
-        container('maven') {
-          sh 'mvn -version'
-        }
-        container('busybox') {
-          sh '/bin/busybox'
+        container('bash') {
+          sh './test.sh'
         }
       }
     }
