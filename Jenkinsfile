@@ -8,10 +8,14 @@ pipeline {
     }
   }
   stages {
-    stage('Run a bash script') {
+    stage('Replace values in yaml') {
+      environment {
+        ACCESS_KEY = credentials('ACCESS_KEY')
+        SECRET_KEY = credentials('SECRET_KEY')
+      }
       steps {
         container('bash') {
-          sh './test.sh'
+          sh './yaml-replace.sh'
         }
       }
     }

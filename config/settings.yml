@@ -1,0 +1,9 @@
+s3:
+  dev_bucket: test-dev
+
+aws:
+  export_access_key_id: secret
+  export_secret_access_key: secret
+
+mailer:
+  port: '8080'
