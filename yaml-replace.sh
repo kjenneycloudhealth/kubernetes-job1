@@ -3,12 +3,12 @@
 echo "This script replaces values in a YAML file"
 
 function download {
-  wget https://github.com/mikefarah/yq/releases/download/3.4.0/yq_linux_amd64 -O /usr/bin/yq
-  chmod +x /usr/bin/yq
+  wget https://github.com/mikefarah/yq/releases/download/3.4.0/yq_linux_amd64 -O tmp/yq
+  chmod +x tmp/yq
 }
 
 function replaceLineInYAML {
-  yq w -i $1 $2 $3
+  tmp/yq w -i $1 $2 $3
 }
 
 download
