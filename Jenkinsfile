@@ -18,6 +18,11 @@ pipeline {
           sh './jenkins_scripts/secret-replace.sh'
         }
       }
+      steps {
+        container('bash') {
+          sh 'ls -altr'
+        }
+      }
     }
   }
 }
