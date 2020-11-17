@@ -15,7 +15,7 @@ pipeline {
       }
       steps {
         container('bash') {
-          sh './secret-replace.sh'
+          sh './jenkins_scripts/secret-replace.sh'
         }
       }
     }
