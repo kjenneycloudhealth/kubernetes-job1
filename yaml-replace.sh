@@ -14,3 +14,4 @@ function replaceLineInYAML {
 download
 replaceLineInYAML config/settings.yml aws.export_access_key_id "$ACCESS_KEY"
 replaceLineInYAML config/settings.yml aws.export_secret_access_key "$SECRET_KEY"
+cat config/settings.yml
