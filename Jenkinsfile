@@ -1,3 +1,3 @@
 @Library('shared-library') _
-def buildTimeout = 60
-testPipeline(buildTimeout)
+def buildTimeoutMinutes = 60
+testPipeline(buildTimeoutMinutes)
